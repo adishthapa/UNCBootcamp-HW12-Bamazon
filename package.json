@@ -1,0 +1,25 @@
+{
+  "name": "uncbootcamp-hw12-bamazon",
+  "version": "1.0.0",
+  "description": "UNC Coding Bootcamp HW 12 Bamazon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adishthapa/UNCBootcamp-HW12-Bamazon.git"
+  },
+  "author": "adishthapa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adishthapa/UNCBootcamp-HW12-Bamazon/issues"
+  },
+  "homepage": "https://github.com/adishthapa/UNCBootcamp-HW12-Bamazon#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "dotenv": "^8.0.0",
+    "inquirer": "^6.5.0",
+    "mysql": "^2.17.1"
+  }
+}
