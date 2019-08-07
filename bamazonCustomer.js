@@ -41,7 +41,7 @@ function printProducts() {
 var start = function() {
     console.log("+-----------------------------------------------------------------------------------------+");
     console.log("|                                                                                         |");
-    console.log("| Welcome to the Bamazon!!!                                                               |");
+    console.log("| Welcome to the Bamazon!!! (Customer)                                                    |");
     console.log("|                                                                                         |");
     console.log("| Items available for sale:                                                               |");
     console.log("|                                                                                         |");
@@ -112,7 +112,7 @@ var retry = function() {
         prompt([{
             type: "confirm",
             name: "confirm",
-            message: "Would you like to try again?",
+            message: "Would you like to try again? ",
             default: true
         }]).then(function(answer) {
             if (answer.confirm) {
