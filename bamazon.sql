@@ -9,7 +9,8 @@ CREATE TABLE products (
     product_name VARCHAR(100),
     department_name VARCHAR(100),
     price DECIMAL(10,2),
-    stock_quantity INT 
+    stock_quantity INT,
+    product_sales DECIMAL(21,2) DEFAULT 0.00
 );
 
 INSERT INTO products(item_id, product_name, department_name, price, stock_quantity)
@@ -24,3 +25,14 @@ VALUES (3005, "cereal", "breakfast", 3.00, 10),
 	   (1602, "bananas", "produce", 1.00, 10),
 	   (1610, "carrots", "produce", 2.00, 7),
        (1650, "spinach", "produce", 2.00, 5);
+       
+CREATE TABLE departments (
+	department_id INT UNIQUE,
+    department_name VARCHAR(100),
+    over_head_costs INT
+);
+
+INSERT INTO departments(department_id, department_name, over_head_costs)
+VALUES (01, "breakfast", 10),
+	   (02, "cleaning_products", 20),
+	   (03, "electronics", 500)

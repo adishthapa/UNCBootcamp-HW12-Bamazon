@@ -64,7 +64,9 @@ var viewProductsForSale = function() {
     console.log("|                                                                                         |");
     console.log("| Items available for sale:                                                               |");
     console.log("|                                                                                         |");
+    console.log("+-----------------------------------------------------------------------------------------+")
     console.log("| " + addSpace("Name:", false) + addSpace("Price:", false) + " " + addSpace("ID:", false) + "   " + addSpace("Department:", true));
+    console.log("+-----------------------------------------------------------------------------------------+")
     connection.query("SELECT * from products;", 
     function(err, res) {
         if (err) throw err;
@@ -86,7 +88,9 @@ var viewLowInventory = function() {
     console.log("|                                                                                         |");
     console.log("| Items available for sale: (Low Inventory)                                               |");
     console.log("|                                                                                         |");
+    console.log("+-----------------------------------------------------------------------------------------+")
     console.log("| " + addSpace("Name:", false) + addSpace("Price:", false) + " " + addSpace("ID:", false) + "   " + addSpace("Department:", true));
+    console.log("+-----------------------------------------------------------------------------------------+")
     connection.query("SELECT * from products WHERE stock_quantity < 5;", 
     function(err, res) {
         if (err) throw err;

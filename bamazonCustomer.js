@@ -45,7 +45,9 @@ var start = function() {
     console.log("|                                                                                         |");
     console.log("| Items available for sale:                                                               |");
     console.log("|                                                                                         |");
+    console.log("+-----------------------------------------------------------------------------------------+")
     console.log("| " + addSpace("Name:", false) + addSpace("Price:", false) + " " + addSpace("ID:", false) + "   " + addSpace("Department:", true));
+    console.log("+-----------------------------------------------------------------------------------------+")
     printProducts();
 };
 start();
@@ -85,11 +87,15 @@ var purchase = function(item_id, quantity, price) {
         }]).then(function(answer) {
             var units = answer.units;
             if (units <= quantity) {
-                var new_quantity = quantity - units;
-                connection.query("UPDATE products SET ? WHERE ?", 
+                var stock_quantity = quantity - units;
+                var product_sales = Number(units) * Number(price);
+                connection.query("UPDATE products SET ?, ? WHERE ?", 
                 [
                     {
-                        stock_quantity: new_quantity
+                        stock_quantity
+                    },
+                    {
+                        product_sales
                     },
                     {
                         item_id
