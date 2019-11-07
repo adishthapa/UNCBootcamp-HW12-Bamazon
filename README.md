@@ -1,5 +1,4 @@
-# UNCBootcamp-HW12-Bamazon
-UNC Coding Bootcamp HW 12 Bamazon
+# Bamazon
 
 Bamazon is a simple command line node application that uses MySQL as its database. The purpose of this application is to mimick Amazon-like storefront with three different roles stored in three different JS files. 
 
